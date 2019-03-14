@@ -8,9 +8,19 @@ Steps:
 2. Make sure you have docker-compose
 3. run the below command,
 
-# docker-compose up -d
+# Pulling docker images and starting the services
+
+$ docker-compose up -d
 
 give it a few mins!
+
+# Django App Configurations
+
+now install elasticapm for django through pip
+
+$ pip install elastic-apm
+
+$ pip install psutil
 
 Now add the following to you django applications settings.py
 
@@ -19,12 +29,7 @@ ELASTIC_APM = {
   'SERVER_URL': 'http://localhost:8200',
 }
 
-now install elasticapm for django through pip
-
-pip install elastic-apm
-pip install psutil
-
-and add it to INSTALLED_APPS.
+now add it to INSTALLED_APPS.
 
 'elasticapm.contrib.django'
 
@@ -38,8 +43,8 @@ Now start the project,
 
 Under the project terminal, you can test the connectivity by,
 
-# ./manage.py elasticapm check
-# ./manage.py elasticapm test
+$ ./manage.py elasticapm check
+$ ./manage.py elasticapm test
 
 You will see results like,
 
