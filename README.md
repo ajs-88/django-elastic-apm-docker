@@ -19,7 +19,12 @@ ELASTIC_APM = {
   'SERVER_URL': 'http://localhost:8200',
 }
 
-now install elasticapm for django through pip and add it to INSTALLED_APPS.
+now install elasticapm for django through pip
+
+pip install elastic-apm
+pip install psutil
+
+and add it to INSTALLED_APPS.
 
 'elasticapm.contrib.django'
 
